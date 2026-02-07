@@ -13,7 +13,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif # BOARD_BLECORNE_LEFT
 
-
 if BOARD_BLECORNE_LEFT || BOARD_BLECORNE_RIGHT
 
 config BOARD
@@ -35,22 +34,13 @@ config USB_DEVICE_STACK
 
 endif # USB
 
-config ZMK_DISPLAY
-    select LV_USE_CONT
-    select LV_FONT_MONTSERRAT_26
-    select LV_FONT_MONTSERRAT_16
-    select LV_USE_LABEL
-    select LV_USE_IMG
-
 if ZMK_DISPLAY
 
 config SPI
     default y
 
-
 config ZMK_DISPLAY_BLANK_ON_IDLE
     default n
-
 
 endif # ZMK_DISPLAY
 
